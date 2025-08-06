@@ -1,16 +1,27 @@
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 
-public class LoadScene : MonoBehaviour
+public partial class ControleDeAudio : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int Volume;
+    public int VolumeSFX;
+    public bool musica;
+
+    public Slider volumeslider;
+    public Slider volumeSFXSlider;
+    public Toggle toggleMusica;
+
     void Start()
     {
-        
+        musica= toggleMusica.isOn;
+        volume = volumeSFXSlider.value;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+    
 }
