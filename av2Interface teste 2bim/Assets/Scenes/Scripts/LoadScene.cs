@@ -1,27 +1,12 @@
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Rendering;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public partial class ControleDeAudio : MonoBehaviour
+public class LoadScene : MonoBehaviour
 {
-    public int Volume;
-    public int VolumeSFX;
-    public bool musica;
-
-    public Slider volumeslider;
-    public Slider volumeSFXSlider;
-    public Toggle toggleMusica;
-
-    void Start()
+    public string sceneName;
+   
+    public void Load()
     {
-        musica= toggleMusica.isOn;
-        volume = volumeSFXSlider.value;
+        SceneManager.LoadScene(sceneName);
     }
-
-    void Update()
-    {
-        
-    }
-    
 }
